@@ -1,9 +1,8 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
-# Avoid interactive prompts in containers
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install Python + LibreDWG CLI
+# Update and install Python + LibreDWG CLI
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       python3 python3-pip libredwg-tools ca-certificates && \
